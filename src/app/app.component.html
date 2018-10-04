@@ -1,0 +1,16 @@
+<ul>
+  <li *ngFor="let contact of contacts">{{  contact.name }}</li>
+</ul>
+<div>
+  <input [(ngModel)]="name">
+  <input [(ngModel)]="email">
+  <button (click)="onCreate()">Add Contact</button>
+</div>
+<div>
+  <input [(ngModel)]="query">
+  <button (click)="onSearch()">Search</button>
+</div>
+<ul *ngIf="current">
+  <li>{{ current.name }}</li>
+  <li>{{ current.email }}</li>
+</ul>
